@@ -12,6 +12,9 @@ class FrameFile:
     def __str__(self):
         return self.filePath
 
+    def swapfilePath(self, newPath: str):
+        self.filePath = newPath
+
     def setImageData(self, imageData):
         self.imageData = imageData
 
@@ -24,7 +27,4 @@ class FrameFile:
 
     def loadImageData(self):
         self.imageData = cv2.imread(self.filePath,cv2.IMREAD_UNCHANGED)
-        #print(self.imageData.dtype)
-        #print(self.imageData)
-        #self.imageData = self.imageData.astype(numpy.uint8)
 
